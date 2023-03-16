@@ -1,0 +1,180 @@
+TReSS - Tout Renommer Sans Soucis (v0.8)
+Guide d'utilisation
+
+1. Installation
+2. Lancement
+	2.1 En un click
+	2.2 En ligne de commande
+3. Utilisation
+	3.1 Fenêtre principale
+	3.2 Renommer
+	3.3 Ajouter
+	3.4 Supprimer
+	3.5 Majuscules
+	3.6 Filtre
+	3.7 Rollback
+	3.8 Fonctionnalités cachées
+	
+1. Installation
+Dézippez tout les fichiers dans un dossier, vous devez avoir
+* Historique
+* lib
+	- forms-1.3.0pre4.jar
+	- PumbaaUtils_v0.1.jar
+- TReSS_X.Y.jar
+- [Guide d'utilisation.txt]
+- [changelog.txt]
+(Note : Les "*" sont des dossiers, les "-" sont des fichiers et les fichiers entre crochet "[]" sont facultatifs)
+
+Téléchargez et installez une JVM 1.6 mininum ( par exemple ici http://www.java.com/fr/download/ )
+
+2. Lancement
+	2.1 En un click
+	Si l'installation de java s'est déroulée normalement, vous pouvez simplement double-cliquer sur TReSS_X.Y.jar (oui ok, ça fait DEUX clicks...)
+	Si ça ne fonctionne pas, vérifiez que la variable d'environnement PATH contient le chemin d'installation de java (généralement "C:\Program Files\Java\jre1.6.XXX"
+	
+	2.2 En ligne de commande
+	Ouvrez une console (sous windows : Démarrer, Exécuter, cmd), rendez vous dans le répertoire de TReSS et tapez : java -jar TReSS_X.Y.jar
+
+	En remplaçant X.Y par le numéro de version.
+
+3. Utilisation
+	3.1 Fenêtre principale
+		3.1.1 Chemin
+		La 1ère chose à faire au lancement du programme est de choisir le répertoire dans lequel sont contenus les fichiers ou dossiers que vous voulez traiter.
+		Pour ce faire vous pouvez passer par le menu "Fichier", "Ouvrir dossier" ou coller le chemin complet dans la barre "Chemin".
+		Si un chemin valide est contenu dans le presse-papier, le programme pointera directement dessus.
+		
+		3.1.2 Zone Entrée
+		Une fois le répertoire choisi, son contenu s'affiche dans la zone "Entrée".
+		Cette zone apparait sous forme de tableau à 3 colones.
+		Dans la 1ère se trouve une case à cocher qui permet de choisir si on veut appliquer les changements à venir à ce fichier/dossier ou pas.
+		Dans la 2ème il y a le nom du fichier et dans la 3ème son type ("FICHIER" ou "DOSSIER"). Les dossiers sont affichés en 1er, puis les fichiers, dans l'ordre alphabetique.
+
+		Il est possible de naviguer dans la zone en double-cliquant sur les dossiers, mais si vous voulez juste sélectionner le texte d'une cellule, pressez F2.
+
+		En dessous de cette zone se trouvent 2 cases à cocher qui permettent de modifier la sélection courante.
+
+		Encore en dessous il y a un bouton "Copier" qui sert à copier sous forme de chaine de caractère la totalité des noms de fichiers/dossiers sélectionnés (avec ou sans l'extension) séparés par des retours à la ligne (\n).
+		
+		3.1.3 Zone Sortie
+		C'est ici qu'apparaitront les modifications à effectuer une fois que vous aurez choisi une action dans les onglets de droite. (Voir plus bas)
+		Par contre il est possible de l'éditer manuellement après avoir choisi une action, ou carrément tout remplire à la main, par exemple en utilisant le bouton "Copier" de la zone "Entrée" et en collant le contenu du presse-papier.
+		
+		Quand les modifications vous satisfont, cliquez sur le bouton "Appliquer" pour renommer vos fichiers.
+		
+		Il est possible qu'un message d'erreur apparaisse, si le programme n'arrive pas à renommer un fichier.
+		Dans ce cas, le message indique le nom du fichier qu'il tente de renommer, et le nom qu'il tente de lui donner.
+		Vous pouvez choisir soit d'ignorer le message et de continuer, le fichier cité ne sera pas impacté et le programme tentera de renommer les autres.
+		Vous pouvez aussi arrêter là l'action.
+		Ou vous pouvez annuler toutes les modifications déjà effectuées. Si vous choisissez cette option, une nouvelle fenêtre s'ouvre, son comportement est décrit dans la partie Rollback (3.7)
+		
+		Il est possible de garder inchangée l'extension de chaque fichier, même si le nom dans la zone "Sortie" contient une extension.
+		En cochant la case "Extension automatique", les fichiers garderont leur extension actuelle.
+		Exemple : Si l’aperçu affiche "text.zip" comme nouveau nom pour le fichier "text.txt", le résultat sera "text.zip.txt"
+
+	3.2 Renommer
+	Renomme tout les fichiers/dossiers avec le nom choisi dans la zone "Texte" et ajoute un nombre pour que chaque nom soit unique.
+	Ce nombre peut être paramétré dans la zone "Compteur" en choisissant le nombre de début et l'incrément.
+	Le bourrage permet de faire en sorte que chaque fichier/dossier contiennent le même nombre de caractère en rajoutant le caractère de votre choix (0 par défaut) pour les petits nombres.
+	Il est possible de mettre ce compteur au tout début du nom de fichier, à la fin (avant l'extension si vous en avez choisi une après le point dans la zone "Texte") ou à la toute fin du fichier, après l'extension.
+	
+	3.3 Ajouter
+	Permet d'ajout soit du texte, soit un compteur à la position indiquée.
+	Le compteur fonctionne comme pour l'onglet "Renommer" (3.2).
+	Idem pour le choix de la position.
+	Exemple : Vous avez la saison 1 de votre série préférée dont tout les épisodes commencent par "01-", "02-", "..." mais vous aimeriez que ça soit plutôt "1x01-", "2x02-", "..."
+	Ajoutez le text "1x" en position 0 depuis le début et c'est bon.
+
+	3.4 Supprimer
+		3.4.1 Début ou fin du nom
+		Choisissez le nombre de caractères à supprimer, soit en début, soit en fin de nom.
+		Si le nom d'un fichier/dossier contient moins de caractères que ce vous avez choisi, son nom sera inchangé.
+				
+		3.4.2 Zone
+		Choisissez la portion de caractères à supprimer.
+		Si le nom d'un fichier/dossier contient moins de caractères que ce vous avez choisi, son nom sera inchangé.
+		La position des caractères commence à zéro. Donc choisir de supprimer de 0 à 0 supprimera le 1er caractère, par exemple.
+				
+		3.4.3 Remplacement
+		Cette fonction est un poil plus complexe que toute les autres, notamment car elle intègre la notion d'expression régulière que j'expliquerais vaguement juste en dessous (3.4.4).
+		Tout d'abord la fonction va rechercher le texte (ou la regex, selon que la case correspondante est cochée ou non) marqué dans "Rechercher". Si elle en trouve une occurrence, elle va la remplacer par le contenu de la zone "Remplacer par" (qui a le droit d'être vide).
+		
+		Il est possible de limiter le nombre d'occurrence a remplacer dans un fichier/dossier en ajustant le petit compteur à droite. Si il est réglé sur 0 il remplace tout, sinon il se limite.
+		
+		Si vous cochez la case "Distinction minuscules / majuscules" le champ de recherche sera sensible à la casse, sinon il ne fera pas de différence entre les minuscules ou les majuscules.
+		
+		3.4.4 Regex
+		Pour un "cours" plus global, je vous revoie sur la page wikipedia, notamment sur les paragraphes "Principes de base" et "Notation" http://fr.wikipedia.org/wiki/Regex
+		
+		Sinon voici quelque pattern simple qui pourront vous aider.
+		N'importe quel caractère : .
+		Un chiffre : [0-9]
+		Une lettre minuscule : [a-z]
+		Une lettre majuscule : [A-Z]
+		Des parenthèses contenant du texte : \(.*\)
+
+		Si vous ne voulez pas rechercher un seul caractère, mais plutôt plusieurs, ajoutez une étoile. Par exemple pour trouver plusieurs chiffres : [0-9]*
+
+		Bien sur, tout ceci est combinable. Chercher une chaine correspondant à "une lettre minuscule, puis plusieurs chiffre, puis plusieurs lettre majuscules" s'écrira : [a-z][0-9]*[A-Z]*
+
+		Il est aussi possible d'inclure du texte "normal" dans une regex. Si tout vos fichier sont de la forme "1x01 - NOM_DE_L'EPISODE_ripped_by_kiKoO_R00skoor(DU_BLA_BLA_INUTILE_QUI_VARIE_D'UN_FICHIER_A_L'AUTRE)_QQCH.avi" il est possible de virer tout le boxon avec l'expression suivante : _ripped_by_kiKoO_R00skoor\(.*\)_QQCH
+		
+		Pour les puristes : Oui je sais que l'étoile correspond à "zéro ou plusieurs" et non pas juste "plusieurs", mais on va faire simple pour une fois.
+	
+	3.5 Majuscules
+	Comme dans l'option de remplacement (3.4.3) il est possible de limiter le nombre d'occurrence à remplacer en modifiant le petit compteur en bas à droite.
+	
+	En cochant la case "Uniquement" associée à chaque choix (décrits plus bas) vous remplacerez par des minuscules les lettres qui ne doivent pas être converties en majuscule.
+	
+	La case "Distinction minuscules / majuscules" fonctionne comme dans l'onglet "Remplacement" (3.4.3).
+	
+		3.5.1 1er mot
+		Le 1er mot identifié par une suite de lettre sans chiffres ni caractères spéciaux, délimité par des espaces, point, point d'exclamation prendra une majuscule au début.
+		
+		3.5.2 Au début de chaque mot
+		Chaque mot identifié de la même manière qu'en 3.5.1 commencera par une majuscule.
+		
+		3.5.3 Nul part
+		Tout est converti en minuscule.
+		
+		3.5.4 Partout
+		Tout est converti en majuscule.
+		
+		3.5.5 Après
+		Chaque lettre qui suit le caractère marqué dans la zone de texte sera converti en majuscule.
+		Il est possible de choisir plusieurs caractères, séparez les termes après lesquels vous voulez voir apparaître une majuscule par des slashs "/" (\t pour les tabulations et \n pour les retour à la ligne).
+	
+	3.6 Filtre
+	Cet onglet est un peu spécial car il ne propose pas de formater les noms des fichiers/dossiers, mais il permet de filtrer la liste dans la zone "Entrée" selon certains critères.
+	
+	Vous pouvez déjà choisir d'afficher seulement les fichiers ou seulement les dossiers en sélectionnant les cases à cocher correspondantes.
+	
+	Après coup vous pouvez afficher les fichiers/dossiers restants contenant un certain texte en tapant le terme dans la zone "Afficher". Il est possible de rentrer plusieurs critères, séparés par des slash "/".
+	
+	Ensuite vous pouvez supprimer de la liste restantes les fichiers/dossiers de la même manière que pour la méthode "Afficher"
+	
+	La case "Distinction minuscules / majuscules" fonctionne comme dans l'onglet "Remplacement" (3.4.3).
+	
+	3.7 Rollback
+	Après chaque changement effectif (donc après avoir cliqué sur Appliquer) un fichier de log est créé dans le dossier Historique.
+	Ce fichier contient la liste des fichiers modifiés, avec le chemin complet avant et après modification.
+	
+	Si vous voulez annuler un changement, cliquez sur le menu "Fichier", "Rollback" et allez choisir le fichier correspondant à l'action à annuler.
+	Une nouvelle fenêtre s'ouvre et affiche à gauche le nom du fichier tel qu'il est actuellement et à droite le nom qu'il prendra après l'action, qui correspond donc au nom du fichier avant son changement.
+	Si une case apparait en rouge, c'est que le fichier n'existe plus actuellement, donc il sera impossible de lui rendre son ancien nom.
+	
+	3.8 Fonctionnalités cachées
+		3.8.1 Chemin
+		Au lancement du programme, si un chemin de dossier est présent dans le presse-papier, le programme va le lire et afficher son contenu dans la zone "Entrée"
+
+		3.8.2 Actualiser
+		Le bouton Actualiser rafraichi le dossier lu en le lisant à nouveau. Donc les changements apportés extérieurement au programme seront pris en compte.
+		Un simple clique dans la barre du chemin fait pareil.
+
+		3.8.3 Info-bulle
+		De nombreuses info-bulles (tool-tip text) sont disponibles en laissant la souris posée sur les composants. Certains plus utiles que d’autre (A)
+		
+		
+
+Programmé par Loïc Correvon, aka Pumbaa

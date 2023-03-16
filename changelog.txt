@@ -1,0 +1,12 @@
+v0.8
+- N'ajoute plus 2x l'extension si l'option "Extension automatique" est cochée et que le fichier contient déjà la même extension.
+- Préviens, lors d'un aperçu, si les noms de fichiers contiennent des caractères deprecated
+- Ajout de la navigation dans les dossiers
+- Refactoring
+
+v0.7
+- Débuggage de la regex dans le panneau "Supprimer"
+- Ajout d'un bouton Copier dans l'interface principale, pour copier dans le presse-papier le contenu de la zone "Entrée"
+- Dans le panneau "Ajouter" c'est maintenant l'option "Depuis le début" qui est cochée par défaut
+- Crée le dossier Historique si il n'existe pas
+- Ajout du changelog ^^
