@@ -13,7 +13,7 @@ Dézippez tout les fichiers dans un dossier, vous devez avoir :
 - [ReadMe.md]
 - [changelog.txt]
 
-![install-bot](.readme-screenshots/install_folder.png)
+![install-folder](.readme-screenshots/install_folder.png)
 
 Téléchargez et installez une JVM 1.6 minimum (par exemple ici [Java.com](http://www.java.com/fr/download/))
 
@@ -29,29 +29,29 @@ En remplaçant X.Y par le numéro de version.
 
 ### Renommer
 Renomme complètement chaque fichier, avec un compteur
-![install-bot](.readme-screenshots/tress_ui_rename.png)
+![features-rename](.readme-screenshots/tress_ui_rename.png)
 
 ### Ajouter
 Ajoute du texte à chaque fichier.
 Au début, à la fin, au milieu, en prennant en compte l'extension du fichier ou pas, à choix
-![install-bot](.readme-screenshots/tress_ui_add.png)
+![features-add](.readme-screenshots/tress_ui_add.png)
 
 ### Supprimer
 Supprime une portion de texte.
 Soit un nombre de caractères fixes, soit avec une fonction rechercher/remplacer.
 Supporte les regex et fait la distinction minuscule/majuscule, à choix.
-![install-bot](.readme-screenshots/tress_ui_delete.png)
+![features-delete](.readme-screenshots/tress_ui_delete.png)
 
 ### Majuscule / Minuscule
 Uniformise les minuscules/majuscules
-![install-bot](.readme-screenshots/tress_ui_uppercase.png)
+![features-uppercase](.readme-screenshots/tress_ui_uppercase.png)
 
 ### Rollback
 
 Un système de rollback est en place, chaque renommage génère un fichier de log avec tous les fichiers concernés.
 Il est possible de revenir à la situation précédente en un clic, si les fichiers n'ont pas été supprimés (ces derniers apparaissent en rouge dans l'interface).
 
-![install-bot](.readme-screenshots/tress_ui_rollback.png)
+![rollback](.readme-screenshots/tress_ui_rollback.png)
 
 ## Liste des fonctionnalités "cachées"
 
