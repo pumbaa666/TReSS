@@ -25,6 +25,34 @@ java -jar TReSS_X.Y.jar
 
 En remplaçant X.Y par le numéro de version.
 
+## Les différents écrans et fonctions
+
+### Renommer
+Renomme complètement chaque fichier, avec un compteur
+![install-bot](.readme-screenshots/tress_ui_rename.png)
+
+### Ajouter
+Ajoute du texte à chaque fichier.
+Au début, à la fin, au milieu, en prennant en compte l'extension du fichier ou pas, à choix
+![install-bot](.readme-screenshots/tress_ui_add.png)
+
+### Supprimer
+Supprime une portion de texte.
+Soit un nombre de caractères fixes, soit avec une fonction rechercher/remplacer.
+Supporte les regex et fait la distinction minuscule/majuscule, à choix.
+![install-bot](.readme-screenshots/tress_ui_delete.png)
+
+### Majuscule / Minuscule
+Uniformise les minuscules/majuscules
+![install-bot](.readme-screenshots/tress_ui_uppercase.png)
+
+### Rollback
+
+Un système de rollback est en place, chaque renommage génère un fichier de log avec tous les fichiers concernés.
+Il est possible de revenir à la situation précédente en un clic, si les fichiers n'ont pas été supprimés (ces derniers apparaissent en rouge dans l'interface).
+
+![install-bot](.readme-screenshots/tress_ui_rollback.png)
+
 ## Liste des fonctionnalités "cachées"
 
 ### Chemin
@@ -54,31 +82,3 @@ Si cette case est cochée, les fichiers garderont leur extension actuelle. Si l�
 ### Info-bulle
 
 De nombreuses info-bulles (tool-tip text) sont disponibles en laissant la souris posée sur les composants. Certains plus utiles que d’autres.
-
-## Les différents écrans et fonctions
-
-### Renommer
-Renomme complètement chaque fichier, avec un compteur
-![install-bot](.readme-screenshots/tress_ui_rename.png)
-
-### Ajouter
-Ajoute du texte à chaque fichier.
-Au début, à la fin, au milieu, en prennant en compte l'extension du fichier ou pas, à choix
-![install-bot](.readme-screenshots/tress_ui_add.png)
-
-### Supprimer
-Supprime une portion de texte.
-Soit un nombre de caractères fixes, soit avec une fonction rechercher/remplacer.
-Supporte les regex et fait la distinction minuscule/majuscule, à choix.
-![install-bot](.readme-screenshots/tress_ui_delete.png)
-
-### Majuscule / Minuscule
-Uniformise les minuscules/majuscules
-![install-bot](.readme-screenshots/tress_ui_uppercase.png)
-
-### Rollback
-
-Un système de rollback est en place, chaque renommage génère un fichier de log avec tous les fichiers concernés.
-Il est possible de revenir à la situation précédente en un clic, si les fichiers n'ont pas été supprimés (ces derniers apparaissent en rouge dans l'interface).
-
-![install-bot](.readme-screenshots/tress_ui_rollback.png)
