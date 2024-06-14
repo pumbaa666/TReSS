@@ -1,0 +1,36 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\shell\Pumbaa]
+"MUIVerb"="Pumbaa"
+"SubCommands"="CommandPrompt;TReSS"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\CommandPrompt]
+@="cmd"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\CommandPrompt\command]
+@="cmd.exe /k cd \"%1\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\TReSS]
+@="Tout renommer sans soucis"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\TReSS\command]
+@=".\\TReSS.bat \"%1\""
+
+
+
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Pumbaa]
+"MUIVerb"="Pumbaa"
+"SubCommands"="CommandPromptBack;TReSSBack"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\CommandPromptBack]
+@="cmd"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\CommandPromptBack\command]
+@="cmd.exe /k cd \"%V\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\TReSSBack]
+@="Tout renommer sans soucis"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\TReSSBack\command]
+@=".\\TReSS.bat \"%V\""
